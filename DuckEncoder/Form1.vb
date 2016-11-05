@@ -261,6 +261,10 @@ Public Class frmMain
     End Sub
 
     Private Sub CastellanoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CastellanoToolStripMenuItem.Click
-        MsgBox(languagePath)
+
+    End Sub
+
+    Private Sub InglesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InglesToolStripMenuItem.Click
+
     End Sub
 End Class
