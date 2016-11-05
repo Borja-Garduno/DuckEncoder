@@ -61,6 +61,66 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property be() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("be", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property br() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("br", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property ca() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ca", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property ch() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ch", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property de() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("de", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property dk() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("dk", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property ducky() As System.Drawing.Bitmap
@@ -106,6 +166,136 @@ Namespace My.Resources
         Friend ReadOnly Property es() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("es", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property fi() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fi", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property fr() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fr", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property gb() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("gb", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property hr() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("hr", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property it() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("it", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property keyboard() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("keyboard", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property no() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("no", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property pt() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("pt", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property ru() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ru", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property si() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("si", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property sv() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("sv", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property tr() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("tr", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property us() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("us", resourceCulture)
                 Return CType(obj,Byte())
             End Get
         End Property

@@ -108,6 +108,94 @@ Public Class frmMain
                 sw.Close()
                 FilePathInput = scriptPath
 
+                If IdiomaModulo.idiomaPath Is Nothing Then
+                    languagePath = "C:\Temp\es.properties"
+                Else
+                    languagePath = "C:\Temp\" + IdiomaModulo.idiomaPath
+
+                    Select Case IdiomaModulo.idiomaIndex
+                        Case 0
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.be, 0, My.Resources.be.Length)
+                            End Using
+                        Case 1
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.br, 0, My.Resources.br.Length)
+                            End Using
+                        Case 2
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.ca, 0, My.Resources.ca.Length)
+                            End Using
+                        Case 3
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.ch, 0, My.Resources.ch.Length)
+                            End Using
+                        Case 4
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.de, 0, My.Resources.de.Length)
+                            End Using
+                        Case 5
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.dk, 0, My.Resources.dk.Length)
+                            End Using
+                        Case 6
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.es, 0, My.Resources.es.Length)
+                            End Using
+                        Case 7
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.fi, 0, My.Resources.fi.Length)
+                            End Using
+                        Case 8
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.fr, 0, My.Resources.fr.Length)
+                            End Using
+                        Case 9
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.gb, 0, My.Resources.gb.Length)
+                            End Using
+                        Case 10
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.hr, 0, My.Resources.hr.Length)
+                            End Using
+                        Case 11
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.it, 0, My.Resources.it.Length)
+                            End Using
+                        Case 12
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.no, 0, My.Resources.no.Length)
+                            End Using
+                        Case 13
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.pt, 0, My.Resources.pt.Length)
+                            End Using
+                        Case 14
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.ru, 0, My.Resources.ru.Length)
+                            End Using
+                        Case 15
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.si, 0, My.Resources.si.Length)
+                            End Using
+                        Case 16
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.sv, 0, My.Resources.sv.Length)
+                            End Using
+                        Case 17
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.tr, 0, My.Resources.tr.Length)
+                            End Using
+                        Case 18
+                            Using MsiFile As New FileStream(languagePath, FileMode.Create)
+                                MsiFile.Write(My.Resources.us, 0, My.Resources.us.Length)
+                            End Using
+                    End Select
+
+                End If
+
+                MsgBox(languagePath)
+
                 ' Process.Start("java.exe", "-jar C:\Temp\encoder.jar -l C:\Temp\es.properties -i " + FilePathInput + " -o """ + sfd.FileName + """")
                 Process.Start("java.exe", "-jar " + encoderPath + " -l " + languagePath + " -i " + FilePathInput + " -o """ + sfd.FileName + """")
             End If
@@ -145,7 +233,7 @@ Public Class frmMain
     End Sub
 
     Private Sub AcercaDeDuckyEncoderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeDuckyEncoderToolStripMenuItem.Click
-        Acercade.ShowDialog()
+        frmAcercade.ShowDialog()
     End Sub
 
     Private Sub NuevoToolStripButton_Click(sender As Object, e As EventArgs) Handles NuevoToolStripButton.Click
@@ -166,5 +254,13 @@ Public Class frmMain
 
     Private Sub EncodeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncodeToolStripMenuItem.Click
         encode()
+    End Sub
+
+    Private Sub IdiomaEncoderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IdiomaEncoderToolStripMenuItem.Click
+        frmIdioma.ShowDialog()
+    End Sub
+
+    Private Sub CastellanoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CastellanoToolStripMenuItem.Click
+        MsgBox(languagePath)
     End Sub
 End Class

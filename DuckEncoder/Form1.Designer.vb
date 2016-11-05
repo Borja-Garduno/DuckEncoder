@@ -29,6 +29,7 @@ Partial Class frmMain
         Me.NuevoScriptToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GuardarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EncodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,11 +39,15 @@ Partial Class frmMain
         Me.AcercaDeDuckyEncoderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblScriptName = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.AjustesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IdiomaAplicaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CastellanoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InglesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IdiomaEncoderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.AbrirToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.GuardarToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.EncodeToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.EncodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -64,7 +69,7 @@ Partial Class frmMain
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.VerToolStripMenuItem, Me.AcercaDeToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.AjustesToolStripMenuItem, Me.VerToolStripMenuItem, Me.AcercaDeToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(869, 24)
@@ -98,6 +103,13 @@ Partial Class frmMain
         Me.GuardarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
         Me.GuardarToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.GuardarToolStripMenuItem.Text = "Guardar"
+        '
+        'EncodeToolStripMenuItem
+        '
+        Me.EncodeToolStripMenuItem.Name = "EncodeToolStripMenuItem"
+        Me.EncodeToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
+        Me.EncodeToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.EncodeToolStripMenuItem.Text = "Encode"
         '
         'ToolStripSeparator1
         '
@@ -165,6 +177,38 @@ Partial Class frmMain
         Me.ToolStrip1.TabIndex = 9
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'AjustesToolStripMenuItem
+        '
+        Me.AjustesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IdiomaAplicaciónToolStripMenuItem, Me.IdiomaEncoderToolStripMenuItem})
+        Me.AjustesToolStripMenuItem.Name = "AjustesToolStripMenuItem"
+        Me.AjustesToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
+        Me.AjustesToolStripMenuItem.Text = "Ajustes"
+        '
+        'IdiomaAplicaciónToolStripMenuItem
+        '
+        Me.IdiomaAplicaciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CastellanoToolStripMenuItem, Me.InglesToolStripMenuItem})
+        Me.IdiomaAplicaciónToolStripMenuItem.Name = "IdiomaAplicaciónToolStripMenuItem"
+        Me.IdiomaAplicaciónToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.IdiomaAplicaciónToolStripMenuItem.Text = "Idioma aplicación"
+        '
+        'CastellanoToolStripMenuItem
+        '
+        Me.CastellanoToolStripMenuItem.Name = "CastellanoToolStripMenuItem"
+        Me.CastellanoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CastellanoToolStripMenuItem.Text = "Castellano"
+        '
+        'InglesToolStripMenuItem
+        '
+        Me.InglesToolStripMenuItem.Name = "InglesToolStripMenuItem"
+        Me.InglesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.InglesToolStripMenuItem.Text = "Ingles"
+        '
+        'IdiomaEncoderToolStripMenuItem
+        '
+        Me.IdiomaEncoderToolStripMenuItem.Name = "IdiomaEncoderToolStripMenuItem"
+        Me.IdiomaEncoderToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.IdiomaEncoderToolStripMenuItem.Text = "Idioma encoder"
+        '
         'NuevoToolStripButton
         '
         Me.NuevoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -200,13 +244,6 @@ Partial Class frmMain
         Me.EncodeToolStripButton.Name = "EncodeToolStripButton"
         Me.EncodeToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.EncodeToolStripButton.Text = "&Encode"
-        '
-        'EncodeToolStripMenuItem
-        '
-        Me.EncodeToolStripMenuItem.Name = "EncodeToolStripMenuItem"
-        Me.EncodeToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
-        Me.EncodeToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
-        Me.EncodeToolStripMenuItem.Text = "Encode"
         '
         'frmMain
         '
@@ -250,4 +287,9 @@ Partial Class frmMain
     Friend WithEvents GuardarToolStripButton As ToolStripButton
     Friend WithEvents EncodeToolStripButton As ToolStripButton
     Friend WithEvents EncodeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AjustesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents IdiomaAplicaciónToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CastellanoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InglesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents IdiomaEncoderToolStripMenuItem As ToolStripMenuItem
 End Class
