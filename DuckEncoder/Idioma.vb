@@ -99,7 +99,7 @@ Public Class frmIdioma
         Try
             txtIdiomaModificado.Text = ofd.FileName
 
-            Dim newPath As String = "C:\Temp\DuckyEncoder\" + Path.GetFileName(ofd.FileName)
+            Dim newPath As String = "C:\Temp\DuckyEncoder\resources\" + Path.GetFileName(ofd.FileName)
             File.Copy(ofd.FileName, newPath, 1)
 
             My.Settings.idiomaModificadoPath = newPath

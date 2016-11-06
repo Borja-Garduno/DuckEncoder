@@ -7,6 +7,7 @@ Public Class frmMain
     Dim FilePathInput As String
 
     Dim directorioTemporal As String = "C:\Temp\DuckyEncoder\"
+    Dim directorioResources As String = "resources\"
 
     Dim encoderPath As String = "encoder.jar"
     Dim languagePath As String = "es.properties"
@@ -14,24 +15,30 @@ Public Class frmMain
 
     Dim ficheroCargado As Boolean = False
 
+    Dim ofd As New OpenFileDialog
+
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' COMPROBAR SI EL DIRECTORIO TEMP\DUCKYENCODER EXISTE
         If Not Directory.Exists(directorioTemporal) Then
             Directory.CreateDirectory(directorioTemporal)
         End If
 
-        If File.Exists(directorioTemporal + scriptPath) Then
-            File.Delete(directorioTemporal + scriptPath)
+        ' COMPROBAR SI EL DIRECTORIO DUCKYENCODER\RESOURCES EXISTE
+        If Not Directory.Exists(directorioTemporal + directorioResources) Then
+            Directory.CreateDirectory(directorioTemporal + directorioResources)
         End If
 
-        ' ENCODER TEMPORAL
-        Using MsiFile As New FileStream(directorioTemporal + encoderPath, FileMode.Create)
-            MsiFile.Write(My.Resources.encoder, 0, My.Resources.encoder.Length)
-        End Using
+        If Not File.Exists(directorioTemporal + encoderPath) = True Then
+            ' ENCODER TEMPORAL
+            Using MsiFile As New FileStream(directorioTemporal + encoderPath, FileMode.Create)
+                MsiFile.Write(My.Resources.encoder, 0, My.Resources.encoder.Length)
+            End Using
+        End If
 
         ' IDIOMA TEMPORAL
-        Using MsiFile As New FileStream(directorioTemporal + languagePath, FileMode.Create)
-            MsiFile.Write(My.Resources.es, 0, My.Resources.es.Length)
-        End Using
+        'Using MsiFile As New FileStream(directorioTemporal + languagePath, FileMode.Create)
+        '    MsiFile.Write(My.Resources.es, 0, My.Resources.es.Length)
+        'End Using
 
         If My.Settings.colorScript = 0 Then
             ConsolaToolStripMenuItem_Click(sender, e)
@@ -41,14 +48,19 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_FormClosed(sender As Object, e As EventArgs) Handles MyBase.FormClosed
-        ' ELIMINAR FICHEROS TEMPORALES
+        ' ELIMINAR ENCODER
         If File.Exists(directorioTemporal + encoderPath) = True Then
             File.Delete(directorioTemporal + encoderPath)
         End If
 
-        If File.Exists(directorioTemporal + languagePath) = True Then
-            File.Delete(directorioTemporal + languagePath)
+        ' ELIMINAR CARPETA RESOURCES + FICHEROS IDIOMAS
+        If Directory.Exists(directorioTemporal + directorioResources) Then
+            Directory.Delete(directorioTemporal + directorioResources, True)
         End If
+
+        'If File.Exists(directorioTemporal + languagePath) = True Then
+        '    File.Delete(directorioTemporal + languagePath)
+        'End If
 
         If File.Exists(directorioTemporal + scriptPath) Then
             File.Delete(directorioTemporal + scriptPath)
@@ -62,7 +74,6 @@ Public Class frmMain
     End Sub
 
     Sub cargar()
-        Dim ofd As New OpenFileDialog
         ofd.Filter = "|*.txt"
         ofd.Title = "Cargar fichero"
         ofd.ShowDialog()
@@ -118,11 +129,11 @@ Public Class frmMain
                 FilePathInput = directorioTemporal + scriptPath
 
                 If My.Settings.idiomaPath Is Nothing Then
-                    languagePath = directorioTemporal + "es.properties"
+                    languagePath = directorioTemporal + directorioResources + "es.properties"
                 Else
 
                     If My.Settings.idiomaModificado = 0 Then
-                        languagePath = directorioTemporal + My.Settings.idiomaPath
+                        languagePath = directorioTemporal + directorioResources + My.Settings.idiomaPath
 
                         Select Case My.Settings.idiomaIndex
                             Case 0
@@ -286,26 +297,35 @@ Public Class frmMain
     End Sub
 
     Private Sub CastellanoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CastellanoToolStripMenuItem.Click
-        Thread.CurrentThread.CurrentUICulture = New CultureInfo("ES")
-        Controls.Clear() 'removes all the controls on the form
-        InitializeComponent() 'load all the controls again
-        frmMain_Load(e, e) 'Load everything in your form load event again
-        InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(0)
-        My.Settings.idiomaApp = 0
-        My.Settings.Save()
-        CastellanoToolStripMenuItem.Checked = True
-        InglesToolStripMenuItem.Checked = False
+        Try
+            Thread.CurrentThread.CurrentUICulture = New CultureInfo("ES")
+            Controls.Clear() 'removes all the controls on the form
+            InitializeComponent() 'load all the controls again
+            frmMain_Load(e, e) 'Load everything in your form load event again
+            InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(0)
+            My.Settings.idiomaApp = 0
+            My.Settings.Save()
+            CastellanoToolStripMenuItem.Checked = True
+            InglesToolStripMenuItem.Checked = False
+        Catch ex As Exception
+            MsgBox("Error idioma castellano", MsgBoxStyle.Critical)
+        End Try
     End Sub
 
     Private Sub InglesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InglesToolStripMenuItem.Click
-        Thread.CurrentThread.CurrentUICulture = New CultureInfo("EN")
-        Controls.Clear() 'removes all the controls on the form
-        InitializeComponent() 'load all the controls again
-        frmMain_Load(e, e) 'Load everything in your form load event again
-        InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(1)
-        My.Settings.idiomaApp = 1
-        My.Settings.Save()
-        InglesToolStripMenuItem.Checked = True
-        CastellanoToolStripMenuItem.Checked = False
+        Try
+            Thread.CurrentThread.CurrentUICulture = New CultureInfo("EN")
+            Controls.Clear() 'removes all the controls on the form
+            InitializeComponent() 'load all the controls again
+            frmMain_Load(e, e) 'Load everything in your form load event again
+            InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(1)
+            My.Settings.idiomaApp = 1
+            My.Settings.Save()
+            InglesToolStripMenuItem.Checked = True
+            CastellanoToolStripMenuItem.Checked = False
+        Catch ex As Exception
+            MsgBox("Error english language", MsgBoxStyle.Critical)
+        End Try
+
     End Sub
 End Class
