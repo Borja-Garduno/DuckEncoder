@@ -56,18 +56,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("6")>  _
-        Public Property idiomaResource() As Integer
-            Get
-                Return CType(Me("idiomaResource"),Integer)
-            End Get
-            Set
-                Me("idiomaResource") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
         Public Property colorScript() As Integer
             Get
@@ -87,6 +75,54 @@ Namespace My
             End Get
             Set
                 Me("idiomaApp") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property idiomaModificado() As Integer
+            Get
+                Return CType(Me("idiomaModificado"),Integer)
+            End Get
+            Set
+                Me("idiomaModificado") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property idiomaModificadoPath() As String
+            Get
+                Return CType(Me("idiomaModificadoPath"),String)
+            End Get
+            Set
+                Me("idiomaModificadoPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property idiomaPath() As String
+            Get
+                Return CType(Me("idiomaPath"),String)
+            End Get
+            Set
+                Me("idiomaPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property idiomaIndex() As Integer
+            Get
+                Return CType(Me("idiomaIndex"),Integer)
+            End Get
+            Set
+                Me("idiomaIndex") = value
             End Set
         End Property
     End Class

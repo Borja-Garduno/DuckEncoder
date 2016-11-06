@@ -28,14 +28,13 @@ Public Class frmIdioma
             cbIdioma.Items.Add("UNITED STATES") '   us - 18
         End If
 
-        cbIdioma.SelectedIndex = My.Settings.idiomaResource
+        cbIdioma.SelectedIndex = My.Settings.idiomaIndex
 
-
-        If IdiomaModulo.idiomaModificado = 0 Then
+        If My.Settings.idiomaModificado = 0 Then
             TabControl1.SelectedTab = TabPage1
         Else
             TabControl1.SelectedTab = TabPage2
-            txtIdiomaModificado.Text = IdiomaModulo.idiomaModificadoPath
+            txtIdiomaModificado.Text = My.Settings.idiomaModificadoPath
         End If
 
     End Sub
@@ -85,10 +84,8 @@ Public Class frmIdioma
                 MsgBox("Error")
         End Select
 
-        IdiomaModulo.idiomaPath = idiomaPath
-        IdiomaModulo.idiomaIndex = cbIdioma.SelectedIndex
-
-        My.Settings.idiomaResource = cbIdioma.SelectedIndex
+        My.Settings.idiomaPath = idiomaPath
+        My.Settings.idiomaIndex = cbIdioma.SelectedIndex
         My.Settings.Save()
 
     End Sub
@@ -100,12 +97,12 @@ Public Class frmIdioma
         ofd.ShowDialog()
 
         Try
-            txtIdiomaModificado.Text = Path.GetFileName(ofd.FileName)
+            txtIdiomaModificado.Text = ofd.FileName
 
             Dim newPath As String = "C:\Temp\DuckyEncoder\" + Path.GetFileName(ofd.FileName)
             File.Copy(ofd.FileName, newPath, 1)
 
-            IdiomaModulo.idiomaModificadoPath = newPath
+            My.Settings.idiomaModificadoPath = newPath
         Catch ex As Exception
             MsgBox("Error", MsgBoxStyle.Critical)
         End Try
@@ -113,9 +110,9 @@ Public Class frmIdioma
 
     Private Sub btnAceptarIdioma_Click(sender As Object, e As EventArgs) Handles btnAceptarIdioma.Click
         If TabControl1.SelectedTab Is TabPage1 Then
-            IdiomaModulo.idiomaModificado = 0
+            My.Settings.idiomaModificado = 0
         ElseIf TabControl1.SelectedTab Is TabPage2 Then
-            IdiomaModulo.idiomaModificado = 1
+            My.Settings.idiomaModificado = 1
         End If
 
         Close()

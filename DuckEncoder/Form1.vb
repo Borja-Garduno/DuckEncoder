@@ -31,8 +31,6 @@ Public Class frmMain
             MsiFile.Write(My.Resources.es, 0, My.Resources.es.Length)
         End Using
 
-        IdiomaModulo.idiomaIndex = My.Settings.idiomaResource
-
         If My.Settings.colorScript = 0 Then
             ConsolaToolStripMenuItem_Click(sender, e)
         Else
@@ -118,15 +116,15 @@ Public Class frmMain
                 sw.Close()
                 FilePathInput = directorioTemporal + scriptPath
 
-                If IdiomaModulo.idiomaPath Is Nothing Then
+                If My.Settings.idiomaPath Is Nothing Then
                     languagePath = directorioTemporal + "es.properties"
                     MsgBox("Idioma por defecto español")
                 Else
 
-                    If IdiomaModulo.idiomaModificado = 0 Then
-                        languagePath = directorioTemporal + IdiomaModulo.idiomaPath
+                    If My.Settings.idiomaModificado = 0 Then
+                        languagePath = directorioTemporal + My.Settings.idiomaPath
 
-                        Select Case IdiomaModulo.idiomaIndex
+                        Select Case My.Settings.idiomaIndex
                             Case 0
                                 Using MsiFile As New FileStream(languagePath, FileMode.Create)
                                     MsiFile.Write(My.Resources.be, 0, My.Resources.be.Length)
@@ -207,7 +205,7 @@ Public Class frmMain
 
                         MsgBox("Idioma por defecto: " + languagePath)
                     Else
-                        languagePath = IdiomaModulo.idiomaModificadoPath
+                        languagePath = My.Settings.idiomaModificadoPath
                         MsgBox("Idioma modificado: " + languagePath)
                     End If
 
