@@ -151,6 +151,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Acercade.en.resx">
+      <DependentUpon>Acercade.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acercade.es-ES.resx">
+      <DependentUpon>Acercade.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Acercade.resx">
       <DependentUpon>Acercade.vb</DependentUpon>
     </EmbeddedResource>
