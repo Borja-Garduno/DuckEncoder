@@ -119,7 +119,6 @@ Public Class frmMain
 
                 If My.Settings.idiomaPath Is Nothing Then
                     languagePath = directorioTemporal + "es.properties"
-                    MsgBox("Idioma por defecto español")
                 Else
 
                     If My.Settings.idiomaModificado = 0 Then
@@ -203,11 +202,8 @@ Public Class frmMain
                                     MsiFile.Write(My.Resources.us, 0, My.Resources.us.Length)
                                 End Using
                         End Select
-
-                        MsgBox("Idioma por defecto: " + languagePath)
                     Else
                         languagePath = My.Settings.idiomaModificadoPath
-                        MsgBox("Idioma modificado: " + languagePath)
                     End If
 
                 End If

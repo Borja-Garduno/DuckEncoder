@@ -232,6 +232,9 @@
         2Mz2wxeg6/UAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="NuevoToolStripButton.Text" xml:space="preserve">
+    <value>&amp;New</value>
+  </data>
   <data name="AbrirToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -248,6 +251,9 @@
         g6eHO+A/lyD8ARfG3mk9fv1YAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="AbrirToolStripButton.Text" xml:space="preserve">
+    <value>&amp;Open</value>
+  </data>
   <data name="GuardarToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -263,6 +269,9 @@
         2QqNvgFxDN6urYdWmyMElJMnevh60obRktA701PRtGlg1DOdSkXwzrisaMG/RZLWAE60OMW5fNhvAAAA
         AElFTkSuQmCC
 </value>
+  </data>
+  <data name="GuardarToolStripButton.Text" xml:space="preserve">
+    <value>&amp;Save</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
