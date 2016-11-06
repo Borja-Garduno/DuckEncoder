@@ -1,4 +1,6 @@
-﻿Public Class frmIdioma
+﻿Imports System.IO
+
+Public Class frmIdioma
 
     Dim idiomaPath As String
 
@@ -26,10 +28,16 @@
             cbIdioma.Items.Add("UNITED STATES") '   us - 18
         End If
 
-    End Sub
+        cbIdioma.SelectedIndex = My.Settings.idiomaResource
 
-    Private Sub btnAceptarIdioma_Click(sender As Object, e As EventArgs) Handles btnAceptarIdioma.Click
-        Close()
+
+        If IdiomaModulo.idiomaModificado = 0 Then
+            TabControl1.SelectedTab = TabPage1
+        Else
+            TabControl1.SelectedTab = TabPage2
+            txtIdiomaModificado.Text = IdiomaModulo.idiomaModificadoPath
+        End If
+
     End Sub
 
     Private Sub cbIdioma_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbIdioma.SelectedIndexChanged
@@ -80,6 +88,36 @@
         IdiomaModulo.idiomaPath = idiomaPath
         IdiomaModulo.idiomaIndex = cbIdioma.SelectedIndex
 
+        My.Settings.idiomaResource = cbIdioma.SelectedIndex
+        My.Settings.Save()
+
     End Sub
 
+    Private Sub btnExplorar_Click(sender As Object, e As EventArgs) Handles btnExplorar.Click
+        Dim ofd As New OpenFileDialog
+        ofd.Filter = "|*.properties"
+        ofd.Title = "Cargar Recurso"
+        ofd.ShowDialog()
+
+        Try
+            txtIdiomaModificado.Text = Path.GetFileName(ofd.FileName)
+
+            Dim newPath As String = "C:\Temp\DuckyEncoder\" + Path.GetFileName(ofd.FileName)
+            File.Copy(ofd.FileName, newPath, 1)
+
+            IdiomaModulo.idiomaModificadoPath = newPath
+        Catch ex As Exception
+            MsgBox("Error", MsgBoxStyle.Critical)
+        End Try
+    End Sub
+
+    Private Sub btnAceptarIdioma_Click(sender As Object, e As EventArgs) Handles btnAceptarIdioma.Click
+        If TabControl1.SelectedTab Is TabPage1 Then
+            IdiomaModulo.idiomaModificado = 0
+        ElseIf TabControl1.SelectedTab Is TabPage2 Then
+            IdiomaModulo.idiomaModificado = 1
+        End If
+
+        Close()
+    End Sub
 End Class

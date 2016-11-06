@@ -29,8 +29,12 @@ Partial Class frmIdioma
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtIdiomaModificado = New System.Windows.Forms.TextBox()
+        Me.btnExplorar = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnAceptarIdioma
@@ -56,7 +60,7 @@ Partial Class frmIdioma
         Me.cbIdioma.FormattingEnabled = True
         Me.cbIdioma.Location = New System.Drawing.Point(92, 6)
         Me.cbIdioma.Name = "cbIdioma"
-        Me.cbIdioma.Size = New System.Drawing.Size(173, 21)
+        Me.cbIdioma.Size = New System.Drawing.Size(278, 21)
         Me.cbIdioma.TabIndex = 2
         '
         'TabControl1
@@ -83,13 +87,41 @@ Partial Class frmIdioma
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.btnExplorar)
+        Me.TabPage2.Controls.Add(Me.txtIdiomaModificado)
+        Me.TabPage2.Controls.Add(Me.Label2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(373, 130)
+        Me.TabPage2.Size = New System.Drawing.Size(376, 48)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Añadir recurso modificado"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(5, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(81, 13)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Idioma Recurso"
+        '
+        'txtIdiomaModificado
+        '
+        Me.txtIdiomaModificado.Location = New System.Drawing.Point(92, 6)
+        Me.txtIdiomaModificado.Name = "txtIdiomaModificado"
+        Me.txtIdiomaModificado.Size = New System.Drawing.Size(200, 20)
+        Me.txtIdiomaModificado.TabIndex = 1
+        '
+        'btnExplorar
+        '
+        Me.btnExplorar.Location = New System.Drawing.Point(298, 4)
+        Me.btnExplorar.Name = "btnExplorar"
+        Me.btnExplorar.Size = New System.Drawing.Size(75, 23)
+        Me.btnExplorar.TabIndex = 2
+        Me.btnExplorar.Text = "Explorar"
+        Me.btnExplorar.UseVisualStyleBackColor = True
         '
         'frmIdioma
         '
@@ -107,6 +139,8 @@ Partial Class frmIdioma
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -117,4 +151,7 @@ Partial Class frmIdioma
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents btnExplorar As Button
+    Friend WithEvents txtIdiomaModificado As TextBox
+    Friend WithEvents Label2 As Label
 End Class

@@ -53,6 +53,42 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("6")>  _
+        Public Property idiomaResource() As Integer
+            Get
+                Return CType(Me("idiomaResource"),Integer)
+            End Get
+            Set
+                Me("idiomaResource") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property colorScript() As Integer
+            Get
+                Return CType(Me("colorScript"),Integer)
+            End Get
+            Set
+                Me("colorScript") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property idiomaApp() As Integer
+            Get
+                Return CType(Me("idiomaApp"),Integer)
+            End Get
+            Set
+                Me("idiomaApp") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
