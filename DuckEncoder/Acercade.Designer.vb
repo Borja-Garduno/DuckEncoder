@@ -27,10 +27,10 @@ Partial Class frmAcercade
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.banner = New System.Windows.Forms.PictureBox()
         Me.email = New System.Windows.Forms.LinkLabel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.banner, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -70,15 +70,6 @@ Partial Class frmAcercade
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "© 2016 Tiju´s Corp"
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(13, 187)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(158, 13)
-        Me.Label4.TabIndex = 11
-        Me.Label4.Text = "Todos los derechos reservados."
-        '
         'banner
         '
         Me.banner.Image = Global.DuckEncoder.My.Resources.Resources.ducky
@@ -107,6 +98,15 @@ Partial Class frmAcercade
         Me.Label5.Size = New System.Drawing.Size(132, 13)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Hak5 Duck Encoder 2.6.3"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(13, 187)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(158, 13)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "Todos los derechos reservados."
         '
         'frmAcercade
         '
@@ -137,7 +137,7 @@ Partial Class frmAcercade
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents email As LinkLabel
     Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
 End Class
