@@ -208,8 +208,17 @@ Public Class frmMain
 
                 End If
 
-                ' Process.Start("java.exe", "-jar C:\Temp\encoder.jar -l C:\Temp\es.properties -i " + FilePathInput + " -o """ + sfd.FileName + """")
-                Process.Start("java.exe", "-jar " + directorioTemporal + encoderPath + " -l " + languagePath + " -i " + FilePathInput + " -o """ + sfd.FileName + """")
+                'MsgBox(directorioTemporal + encoderPath)
+                'MsgBox(languagePath)
+                'MsgBox(FilePathInput)
+                'MsgBox(sfd.FileName)
+
+                Try
+                    Process.Start("java.exe", "-jar " + directorioTemporal + encoderPath + " -l " + languagePath + " -i " + FilePathInput + " -o """ + sfd.FileName + """")
+                Catch ex As Exception
+                    MsgBox("Error encoder", MsgBoxStyle.Critical)
+                End Try
+
             End If
         End If
     End Sub
