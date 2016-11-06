@@ -169,6 +169,12 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Idioma.en.resx">
+      <DependentUpon>Idioma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Idioma.es-ES.resx">
+      <DependentUpon>Idioma.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Idioma.resx">
       <DependentUpon>Idioma.vb</DependentUpon>
     </EmbeddedResource>

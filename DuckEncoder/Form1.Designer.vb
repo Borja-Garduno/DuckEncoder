@@ -116,6 +116,8 @@ Partial Class frmMain
         'CastellanoToolStripMenuItem
         '
         resources.ApplyResources(Me.CastellanoToolStripMenuItem, "CastellanoToolStripMenuItem")
+        Me.CastellanoToolStripMenuItem.Checked = True
+        Me.CastellanoToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CastellanoToolStripMenuItem.Name = "CastellanoToolStripMenuItem"
         '
         'InglesToolStripMenuItem

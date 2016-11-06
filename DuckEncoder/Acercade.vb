@@ -1,4 +1,7 @@
-﻿Public Class frmAcercade
+﻿Imports System.Globalization
+Imports System.Threading
+
+Public Class frmAcercade
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         Me.Close()
     End Sub

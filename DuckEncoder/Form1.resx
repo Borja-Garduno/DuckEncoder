@@ -121,7 +121,7 @@
   <data name="NuevoToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAAERSURBVDhPrZDbSgJRGIXnpewd6jXsjSQvIrwoI0RQMChU
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAERSURBVDhPrZDbSgJRGIXnpewd6jXsjSQvIrwoI0RQMChU
         0iiDPCGiE3ZCRkvR8VzTeBhnyR5/ccaZNnPhB4t9sdf6Ln5hb8QeathNJFVFKF5C8DqL4ksDVHWGDf7j
         LHyPg6NjviSaFqlu5yQYR+KpupaIkrMknCxT3Y7v/NYYb0ITK1c3BarbWWhLQ7IR0cTKReyZ6lZ0XYei
         ztHpK4bAc+h1FgQijzSxMptrGIxVSO0xX3AaStFki7bUMVFmaMm/eJMGfIH/MkGzLep0AXn4h/r3CJV3
@@ -1835,7 +1835,7 @@
   <data name="GuardarToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAAIySURBVDhPrZLfS5NRGMfff6H7boIuuq2pMZyL1eAt11CW
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAIySURBVDhPrZLfS5NRGMfff6H7boIuuq2pMZyL1eAt11CW
         DcOKsB9vpFmaLtNExco0av6CbIVLJ61Wk3BSkT/AFCkRZSpZmrmiJQ41xSaCwdfznL15XEUX0Reem5f3
         8znnec4j/Zc8fxYGla91CS3eRTx0z6OpMYS7jmnU1X6B/VYA18snUVoyjsKCt8jLHcH5c36ouCQR2NUJ
         1Nas4G9ZXlmFKbULh1Kf8lJxSfI+WeCCyopv6q+/h+DQ/DJ2WV5Ao1FgPegRAveDOS4oLfmq/h6dn/DH
@@ -1859,9 +1859,6 @@
   </data>
   <data name="&gt;&gt;VerToolStripMenuItem.Name" xml:space="preserve">
     <value>VerToolStripMenuItem</value>
-  </data>
-  <data name="AbrirToolStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
   </data>
   <data name="&gt;&gt;lblScriptName.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1927,9 +1924,6 @@
   <data name="AcercaDeDuckyEncoderToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F1</value>
   </data>
-  <data name="lblScriptName.Text" xml:space="preserve">
-    <value>Nuevo script</value>
-  </data>
   <data name="&gt;&gt;CargarToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1954,8 +1948,8 @@
   <data name="&gt;&gt;txtScript.Name" xml:space="preserve">
     <value>txtScript</value>
   </data>
-  <data name="&gt;&gt;ToolStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="IdiomaEncoderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Idioma encoder</value>
   </data>
   <data name="&gt;&gt;CastellanoToolStripMenuItem.Name" xml:space="preserve">
     <value>CastellanoToolStripMenuItem</value>
@@ -1969,11 +1963,8 @@
   <data name="&gt;&gt;lblScriptName.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;EncodeToolStripMenuItem.Name" xml:space="preserve">
-    <value>EncodeToolStripMenuItem</value>
-  </data>
-  <data name="GuardarToolStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
+  <data name="&gt;&gt;InglesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="CastellanoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
@@ -1996,8 +1987,8 @@
   <data name="&gt;&gt;ToolStrip1.Name" xml:space="preserve">
     <value>ToolStrip1</value>
   </data>
-  <data name="NuevoToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+  <data name="&gt;&gt;EncodeToolStripMenuItem.Name" xml:space="preserve">
+    <value>EncodeToolStripMenuItem</value>
   </data>
   <data name="ToolStrip1.Text" xml:space="preserve">
     <value>ToolStrip1</value>
@@ -2029,11 +2020,17 @@
   <data name="txtScript.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 65</value>
   </data>
+  <data name="&gt;&gt;NuevoToolStripButton.Name" xml:space="preserve">
+    <value>NuevoToolStripButton</value>
+  </data>
   <data name="&gt;&gt;GuardarToolStripButton.Name" xml:space="preserve">
     <value>GuardarToolStripButton</value>
   </data>
   <data name="&gt;&gt;ToolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtScript.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="&gt;&gt;MenuStrip1.Name" xml:space="preserve">
     <value>MenuStrip1</value>
@@ -2044,8 +2041,8 @@
   <data name="lblScriptName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;InglesToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblScriptName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 49</value>
   </data>
   <data name="AcercaDeDuckyEncoderToolStripMenuItem.Text" xml:space="preserve">
     <value>Acerca de Ducky Encoder</value>
@@ -2059,8 +2056,8 @@
   <data name="GuardarToolStripButton.Text" xml:space="preserve">
     <value>&amp;Guardar</value>
   </data>
-  <data name="&gt;&gt;ConsolaToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblScriptName.Text" xml:space="preserve">
+    <value>Nuevo script</value>
   </data>
   <data name="&gt;&gt;IdiomaEncoderToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2074,13 +2071,16 @@
   <data name="GuardarToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+S</value>
   </data>
+  <data name="&gt;&gt;ToolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;IdiomaAplicaciónToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="AbrirToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr4AAA6+AepCscAAAAJHSURBVDhPxZBdSNNhFMb/F110ZZEVhVBgeeHNICiiuggp
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAJHSURBVDhPxZBdSNNhFMb/F110ZZEVhVBgeeHNICiiuggp
         olAUyyxI0oSaH1QYC3N+tKnp5ubm1JUua5uuqdNKMwr7kApFItTUkWZqVhSVYmao5Nevvy7UoYR3HXh4
         4XCe33nOKyy3lAY7l9RWMo0O/raWXxEyo5spVYTNvOGyfIRPfW+ptOkXqaPl6T83hcRmExSdgzAz3NVm
         YWyoYla/B+1M9JtxWLPpaH22JORIjI6gKAMB0jyEimIdo4OlbuaprwVMOOMovammpDADc34qppwUrmnl
@@ -2096,11 +2096,14 @@
   <data name="VerToolStripMenuItem.Text" xml:space="preserve">
     <value>Ventana</value>
   </data>
-  <data name="IdiomaEncoderToolStripMenuItem.Text" xml:space="preserve">
-    <value>Idioma encoder</value>
+  <data name="AbrirToolStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
   </data>
   <data name="&gt;&gt;NuevoScriptToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>869, 25</value>
   </data>
   <data name="&gt;&gt;AcercaDeDuckyEncoderToolStripMenuItem.Name" xml:space="preserve">
     <value>AcercaDeDuckyEncoderToolStripMenuItem</value>
@@ -2111,8 +2114,8 @@
   <data name="&gt;&gt;lblScriptName.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>869, 25</value>
+  <data name="GuardarToolStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
   </data>
   <data name="lblScriptName.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 13</value>
@@ -2141,9 +2144,6 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Ducky Encoder</value>
   </data>
-  <data name="&gt;&gt;lblScriptName.Name" xml:space="preserve">
-    <value>lblScriptName</value>
-  </data>
   <data name="GuardarToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
@@ -2153,8 +2153,8 @@
   <data name="CargarToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+O</value>
   </data>
-  <data name="lblScriptName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 49</value>
+  <data name="&gt;&gt;lblScriptName.Name" xml:space="preserve">
+    <value>lblScriptName</value>
   </data>
   <data name="ConsolaToolStripMenuItem.Text" xml:space="preserve">
     <value>Consola</value>
@@ -2189,17 +2189,20 @@
   <data name="AcercaDeToolStripMenuItem.Text" xml:space="preserve">
     <value>Ayuda</value>
   </data>
-  <data name="&gt;&gt;NuevoToolStripButton.Name" xml:space="preserve">
-    <value>NuevoToolStripButton</value>
+  <data name="&gt;&gt;ConsolaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="AjustesToolStripMenuItem.Text" xml:space="preserve">
     <value>Ajustes</value>
   </data>
-  <data name="txtScript.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="MenuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="NuevoToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
   <data name="NuevoScriptToolStripMenuItem.Text" xml:space="preserve">
     <value>Nuevo</value>
@@ -2212,9 +2215,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>869, 484</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
   </data>
   <data name="NuevoToolStripButton.Text" xml:space="preserve">
     <value>&amp;Nuevo</value>
@@ -2241,7 +2241,7 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
+    <value>es-ES</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

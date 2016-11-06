@@ -38,7 +38,6 @@ Public Class frmMain
         Else
             NormalToolStripMenuItem_Click(sender, e)
         End If
-
     End Sub
 
     Private Sub frmMain_FormClosed(sender As Object, e As EventArgs) Handles MyBase.FormClosed
@@ -287,6 +286,10 @@ Public Class frmMain
         InitializeComponent() 'load all the controls again
         frmMain_Load(e, e) 'Load everything in your form load event again
         InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(0)
+        My.Settings.idiomaApp = 0
+        My.Settings.Save()
+        CastellanoToolStripMenuItem.Checked = True
+        InglesToolStripMenuItem.Checked = False
     End Sub
 
     Private Sub InglesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InglesToolStripMenuItem.Click
@@ -295,5 +298,9 @@ Public Class frmMain
         InitializeComponent() 'load all the controls again
         frmMain_Load(e, e) 'Load everything in your form load event again
         InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(1)
+        My.Settings.idiomaApp = 1
+        My.Settings.Save()
+        InglesToolStripMenuItem.Checked = True
+        CastellanoToolStripMenuItem.Checked = False
     End Sub
 End Class
