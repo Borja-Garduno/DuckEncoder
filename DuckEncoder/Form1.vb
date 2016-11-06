@@ -1,4 +1,6 @@
-﻿Imports System.IO
+﻿Imports System.Globalization
+Imports System.IO
+Imports System.Threading
 
 Public Class frmMain
 
@@ -280,10 +282,18 @@ Public Class frmMain
     End Sub
 
     Private Sub CastellanoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CastellanoToolStripMenuItem.Click
-
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo("ES")
+        Controls.Clear() 'removes all the controls on the form
+        InitializeComponent() 'load all the controls again
+        frmMain_Load(e, e) 'Load everything in your form load event again
+        InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(0)
     End Sub
 
     Private Sub InglesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InglesToolStripMenuItem.Click
-
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo("EN")
+        Controls.Clear() 'removes all the controls on the form
+        InitializeComponent() 'load all the controls again
+        frmMain_Load(e, e) 'Load everything in your form load event again
+        InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(1)
     End Sub
 End Class

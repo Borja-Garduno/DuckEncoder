@@ -36,6 +36,7 @@ Partial Class frmAcercade
         '
         'btnAceptar
         '
+        Me.btnAceptar.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.btnAceptar.Location = New System.Drawing.Point(344, 182)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
@@ -46,6 +47,7 @@ Partial Class frmAcercade
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label1.Location = New System.Drawing.Point(13, 140)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(81, 13)
@@ -55,6 +57,7 @@ Partial Class frmAcercade
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label2.Location = New System.Drawing.Point(13, 157)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(60, 13)
@@ -64,6 +67,7 @@ Partial Class frmAcercade
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label3.Location = New System.Drawing.Point(12, 174)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(96, 13)
@@ -72,7 +76,8 @@ Partial Class frmAcercade
         '
         'banner
         '
-        Me.banner.Image = Global.DuckEncoder.My.Resources.Resources.ducky
+        Me.banner.Image = CType(resources.GetObject("banner.Image"), System.Drawing.Image)
+        Me.banner.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.banner.Location = New System.Drawing.Point(-2, -3)
         Me.banner.Name = "banner"
         Me.banner.Size = New System.Drawing.Size(434, 136)
@@ -83,6 +88,7 @@ Partial Class frmAcercade
         'email
         '
         Me.email.AutoSize = True
+        Me.email.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.email.Location = New System.Drawing.Point(280, 140)
         Me.email.Name = "email"
         Me.email.Size = New System.Drawing.Size(139, 13)
@@ -93,6 +99,7 @@ Partial Class frmAcercade
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label5.Location = New System.Drawing.Point(287, 157)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(132, 13)
@@ -102,6 +109,7 @@ Partial Class frmAcercade
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label4.Location = New System.Drawing.Point(13, 187)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(158, 13)
