@@ -48,116 +48,122 @@ Partial Class frmMain
         Me.AbrirToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.GuardarToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.EncodeToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.txtOutput = New System.Windows.Forms.RichTextBox()
+        Me.panel = New System.Windows.Forms.SplitContainer()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.panel, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panel.Panel1.SuspendLayout()
+        Me.panel.Panel2.SuspendLayout()
+        Me.panel.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtScript
         '
-        resources.ApplyResources(Me.txtScript, "txtScript")
         Me.txtScript.BackColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.txtScript, "txtScript")
         Me.txtScript.ForeColor = System.Drawing.Color.Lime
         Me.txtScript.Name = "txtScript"
         '
         'MenuStrip1
         '
-        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.AjustesToolStripMenuItem, Me.VerToolStripMenuItem, Me.AcercaDeToolStripMenuItem})
+        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.Name = "MenuStrip1"
         '
         'ArchivoToolStripMenuItem
         '
-        resources.ApplyResources(Me.ArchivoToolStripMenuItem, "ArchivoToolStripMenuItem")
         Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoScriptToolStripMenuItem, Me.CargarToolStripMenuItem, Me.GuardarToolStripMenuItem, Me.EncodeToolStripMenuItem, Me.ToolStripSeparator1, Me.SalirToolStripMenuItem})
         Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
+        resources.ApplyResources(Me.ArchivoToolStripMenuItem, "ArchivoToolStripMenuItem")
         '
         'NuevoScriptToolStripMenuItem
         '
-        resources.ApplyResources(Me.NuevoScriptToolStripMenuItem, "NuevoScriptToolStripMenuItem")
         Me.NuevoScriptToolStripMenuItem.Name = "NuevoScriptToolStripMenuItem"
+        resources.ApplyResources(Me.NuevoScriptToolStripMenuItem, "NuevoScriptToolStripMenuItem")
         '
         'CargarToolStripMenuItem
         '
-        resources.ApplyResources(Me.CargarToolStripMenuItem, "CargarToolStripMenuItem")
         Me.CargarToolStripMenuItem.Name = "CargarToolStripMenuItem"
+        resources.ApplyResources(Me.CargarToolStripMenuItem, "CargarToolStripMenuItem")
         '
         'GuardarToolStripMenuItem
         '
-        resources.ApplyResources(Me.GuardarToolStripMenuItem, "GuardarToolStripMenuItem")
         Me.GuardarToolStripMenuItem.Name = "GuardarToolStripMenuItem"
+        resources.ApplyResources(Me.GuardarToolStripMenuItem, "GuardarToolStripMenuItem")
         '
         'EncodeToolStripMenuItem
         '
-        resources.ApplyResources(Me.EncodeToolStripMenuItem, "EncodeToolStripMenuItem")
         Me.EncodeToolStripMenuItem.Name = "EncodeToolStripMenuItem"
+        resources.ApplyResources(Me.EncodeToolStripMenuItem, "EncodeToolStripMenuItem")
         '
         'ToolStripSeparator1
         '
-        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
         '
         'SalirToolStripMenuItem
         '
-        resources.ApplyResources(Me.SalirToolStripMenuItem, "SalirToolStripMenuItem")
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        resources.ApplyResources(Me.SalirToolStripMenuItem, "SalirToolStripMenuItem")
         '
         'AjustesToolStripMenuItem
         '
-        resources.ApplyResources(Me.AjustesToolStripMenuItem, "AjustesToolStripMenuItem")
         Me.AjustesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IdiomaAplicaciónToolStripMenuItem, Me.IdiomaEncoderToolStripMenuItem})
         Me.AjustesToolStripMenuItem.Name = "AjustesToolStripMenuItem"
+        resources.ApplyResources(Me.AjustesToolStripMenuItem, "AjustesToolStripMenuItem")
         '
         'IdiomaAplicaciónToolStripMenuItem
         '
-        resources.ApplyResources(Me.IdiomaAplicaciónToolStripMenuItem, "IdiomaAplicaciónToolStripMenuItem")
         Me.IdiomaAplicaciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CastellanoToolStripMenuItem, Me.InglesToolStripMenuItem})
         Me.IdiomaAplicaciónToolStripMenuItem.Name = "IdiomaAplicaciónToolStripMenuItem"
+        resources.ApplyResources(Me.IdiomaAplicaciónToolStripMenuItem, "IdiomaAplicaciónToolStripMenuItem")
         '
         'CastellanoToolStripMenuItem
         '
-        resources.ApplyResources(Me.CastellanoToolStripMenuItem, "CastellanoToolStripMenuItem")
         Me.CastellanoToolStripMenuItem.Checked = True
         Me.CastellanoToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CastellanoToolStripMenuItem.Name = "CastellanoToolStripMenuItem"
+        resources.ApplyResources(Me.CastellanoToolStripMenuItem, "CastellanoToolStripMenuItem")
         '
         'InglesToolStripMenuItem
         '
-        resources.ApplyResources(Me.InglesToolStripMenuItem, "InglesToolStripMenuItem")
         Me.InglesToolStripMenuItem.Name = "InglesToolStripMenuItem"
+        resources.ApplyResources(Me.InglesToolStripMenuItem, "InglesToolStripMenuItem")
         '
         'IdiomaEncoderToolStripMenuItem
         '
-        resources.ApplyResources(Me.IdiomaEncoderToolStripMenuItem, "IdiomaEncoderToolStripMenuItem")
         Me.IdiomaEncoderToolStripMenuItem.Name = "IdiomaEncoderToolStripMenuItem"
+        resources.ApplyResources(Me.IdiomaEncoderToolStripMenuItem, "IdiomaEncoderToolStripMenuItem")
         '
         'VerToolStripMenuItem
         '
-        resources.ApplyResources(Me.VerToolStripMenuItem, "VerToolStripMenuItem")
         Me.VerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NormalToolStripMenuItem, Me.ConsolaToolStripMenuItem})
         Me.VerToolStripMenuItem.Name = "VerToolStripMenuItem"
+        resources.ApplyResources(Me.VerToolStripMenuItem, "VerToolStripMenuItem")
         '
         'NormalToolStripMenuItem
         '
-        resources.ApplyResources(Me.NormalToolStripMenuItem, "NormalToolStripMenuItem")
         Me.NormalToolStripMenuItem.Name = "NormalToolStripMenuItem"
+        resources.ApplyResources(Me.NormalToolStripMenuItem, "NormalToolStripMenuItem")
         '
         'ConsolaToolStripMenuItem
         '
-        resources.ApplyResources(Me.ConsolaToolStripMenuItem, "ConsolaToolStripMenuItem")
         Me.ConsolaToolStripMenuItem.Checked = True
         Me.ConsolaToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ConsolaToolStripMenuItem.Name = "ConsolaToolStripMenuItem"
+        resources.ApplyResources(Me.ConsolaToolStripMenuItem, "ConsolaToolStripMenuItem")
         '
         'AcercaDeToolStripMenuItem
         '
-        resources.ApplyResources(Me.AcercaDeToolStripMenuItem, "AcercaDeToolStripMenuItem")
         Me.AcercaDeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AcercaDeDuckyEncoderToolStripMenuItem})
         Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
+        resources.ApplyResources(Me.AcercaDeToolStripMenuItem, "AcercaDeToolStripMenuItem")
         '
         'AcercaDeDuckyEncoderToolStripMenuItem
         '
-        resources.ApplyResources(Me.AcercaDeDuckyEncoderToolStripMenuItem, "AcercaDeDuckyEncoderToolStripMenuItem")
         Me.AcercaDeDuckyEncoderToolStripMenuItem.Name = "AcercaDeDuckyEncoderToolStripMenuItem"
+        resources.ApplyResources(Me.AcercaDeDuckyEncoderToolStripMenuItem, "AcercaDeDuckyEncoderToolStripMenuItem")
         '
         'lblScriptName
         '
@@ -166,42 +172,63 @@ Partial Class frmMain
         '
         'ToolStrip1
         '
-        resources.ApplyResources(Me.ToolStrip1, "ToolStrip1")
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripButton, Me.AbrirToolStripButton, Me.GuardarToolStripButton, Me.EncodeToolStripButton})
+        resources.ApplyResources(Me.ToolStrip1, "ToolStrip1")
         Me.ToolStrip1.Name = "ToolStrip1"
         '
         'NuevoToolStripButton
         '
-        resources.ApplyResources(Me.NuevoToolStripButton, "NuevoToolStripButton")
         Me.NuevoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.NuevoToolStripButton, "NuevoToolStripButton")
         Me.NuevoToolStripButton.Name = "NuevoToolStripButton"
         '
         'AbrirToolStripButton
         '
-        resources.ApplyResources(Me.AbrirToolStripButton, "AbrirToolStripButton")
         Me.AbrirToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.AbrirToolStripButton, "AbrirToolStripButton")
         Me.AbrirToolStripButton.Name = "AbrirToolStripButton"
         '
         'GuardarToolStripButton
         '
-        resources.ApplyResources(Me.GuardarToolStripButton, "GuardarToolStripButton")
         Me.GuardarToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.GuardarToolStripButton, "GuardarToolStripButton")
         Me.GuardarToolStripButton.Name = "GuardarToolStripButton"
         '
         'EncodeToolStripButton
         '
-        resources.ApplyResources(Me.EncodeToolStripButton, "EncodeToolStripButton")
         Me.EncodeToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.EncodeToolStripButton.Image = Global.DuckEncoder.My.Resources.Resources.ducky2
+        resources.ApplyResources(Me.EncodeToolStripButton, "EncodeToolStripButton")
         Me.EncodeToolStripButton.Name = "EncodeToolStripButton"
+        '
+        'txtOutput
+        '
+        Me.txtOutput.BackColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.txtOutput, "txtOutput")
+        Me.txtOutput.ForeColor = System.Drawing.Color.Lime
+        Me.txtOutput.Name = "txtOutput"
+        Me.txtOutput.ReadOnly = True
+        '
+        'panel
+        '
+        resources.ApplyResources(Me.panel, "panel")
+        Me.panel.Name = "panel"
+        '
+        'panel.Panel1
+        '
+        Me.panel.Panel1.Controls.Add(Me.txtScript)
+        '
+        'panel.Panel2
+        '
+        Me.panel.Panel2.Controls.Add(Me.txtOutput)
         '
         'frmMain
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.panel)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.lblScriptName)
-        Me.Controls.Add(Me.txtScript)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
@@ -209,6 +236,11 @@ Partial Class frmMain
         Me.MenuStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.panel.Panel1.ResumeLayout(False)
+        Me.panel.Panel1.PerformLayout()
+        Me.panel.Panel2.ResumeLayout(False)
+        CType(Me.panel, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -238,4 +270,6 @@ Partial Class frmMain
     Friend WithEvents CastellanoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InglesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents IdiomaEncoderToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents txtOutput As RichTextBox
+    Friend WithEvents panel As SplitContainer
 End Class

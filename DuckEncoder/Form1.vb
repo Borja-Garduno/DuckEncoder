@@ -6,7 +6,7 @@ Public Class frmMain
 
     Dim FilePathInput As String
 
-    Dim directorioTemporal As String = "C:\Temp\DuckyEncoder\"
+    Dim directorioTemporal As String = Path.GetTempPath() & "DuckEncoder\"
     Dim directorioResources As String = "resources\"
 
     Dim encoderPath As String = "encoder.jar"
@@ -45,6 +45,10 @@ Public Class frmMain
         Else
             NormalToolStripMenuItem_Click(sender, e)
         End If
+
+        ' COLOR TEXTBOX OUTPUT
+        txtOutput.BackColor = Color.Black
+        txtOutput.ForeColor = Color.Lime
     End Sub
 
     Private Sub frmMain_FormClosed(sender As Object, e As EventArgs) Handles MyBase.FormClosed
@@ -225,7 +229,33 @@ Public Class frmMain
                 'MsgBox(sfd.FileName)
 
                 Try
-                    Process.Start("java.exe", "-jar " + directorioTemporal + encoderPath + " -l " + languagePath + " -i " + FilePathInput + " -o """ + sfd.FileName + """")
+                    'Process.Start("java.exe", "-jar " + directorioTemporal + encoderPath + " -l " + languagePath + " -i " + FilePathInput + " -o """ + sfd.FileName + """")
+
+                    Dim JavaProc As New Process()
+                    Dim JavaProcInfo As New ProcessStartInfo("Java", "-jar """ & directorioTemporal + encoderPath & """ -i """ & FilePathInput & """ -o """ & sfd.FileName & """ -l """ & languagePath & """")
+
+                    With JavaProcInfo
+                        .UseShellExecute = False
+                        .CreateNoWindow = True
+                        .RedirectStandardOutput = True
+                    End With
+
+                    With JavaProc
+                        .StartInfo = JavaProcInfo
+                        .Start()
+                        .WaitForExit()
+                    End With
+
+                    Dim sOutput As String
+                    Using sReader As System.IO.StreamReader = JavaProc.StandardOutput
+                        sOutput = sReader.ReadToEnd()
+                    End Using
+
+                    Dim scanData As String = txtOutput.Text
+                    txtOutput.Text = "****************" + Format(TimeOfDay, "HH:mm:ss") + "*****************" + vbNewLine + sOutput
+                    txtOutput.AppendText(vbNewLine + scanData)
+
+                    MsgBox("Fichero compilado correctamente.", MsgBoxStyle.Information)
                 Catch ex As Exception
                     MsgBox("Error encoder", MsgBoxStyle.Critical)
                 End Try
@@ -328,4 +358,5 @@ Public Class frmMain
         End Try
 
     End Sub
+
 End Class

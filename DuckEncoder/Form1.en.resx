@@ -184,12 +184,6 @@
   <data name="AjustesToolStripMenuItem.Text" xml:space="preserve">
     <value>Settings</value>
   </data>
-  <data name="NormalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 22</value>
-  </data>
-  <data name="ConsolaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 22</value>
-  </data>
   <data name="ConsolaToolStripMenuItem.Text" xml:space="preserve">
     <value>Console</value>
   </data>
