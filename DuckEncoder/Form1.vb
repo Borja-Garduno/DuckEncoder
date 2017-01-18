@@ -28,6 +28,7 @@ Public Class frmMain
             Directory.CreateDirectory(directorioTemporal + directorioResources)
         End If
 
+        ' COMPROBAR SI EXISTE EL FICHERO ENCODER.JAR
         If Not File.Exists(directorioTemporal + encoderPath) = True Then
             ' ENCODER TEMPORAL
             Using MsiFile As New FileStream(directorioTemporal + encoderPath, FileMode.Create)
@@ -40,10 +41,40 @@ Public Class frmMain
         '    MsiFile.Write(My.Resources.es, 0, My.Resources.es.Length)
         'End Using
 
+        ' CARGAMOS LA CONFIGURACION DE LA PANTALLA
         If My.Settings.colorScript = 0 Then
-            ConsolaToolStripMenuItem_Click(sender, e)
+            colorScriptConsola(sender, e)
         Else
-            NormalToolStripMenuItem_Click(sender, e)
+            colorScriptNormal(sender, e)
+        End If
+
+        ' CARGAMOS EL IDIOMA
+        If My.Settings.idiomaApp = 0 Then
+            'Console.WriteLine("Iniciamos la aplicacion en Castellano")
+
+            Try
+                Thread.CurrentThread.CurrentUICulture = New CultureInfo("ES")
+                InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(0)
+                Controls.Clear() 'removes all the controls on the form
+                InitializeComponent() 'load all the controls again
+                CastellanoToolStripMenuItem.Checked = True
+                InglesToolStripMenuItem.Checked = False
+            Catch ex As Exception
+                MsgBox("Error idioma castellano", MsgBoxStyle.Critical)
+            End Try
+        ElseIf My.Settings.idiomaApp = 1 Then
+            'Console.WriteLine("Iniciamos la aplicacion en Ingles")
+
+            Try
+                Thread.CurrentThread.CurrentUICulture = New CultureInfo("EN")
+                Controls.Clear() 'removes all the controls on the form
+                InitializeComponent() 'load all the controls again
+                InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(1)
+                InglesToolStripMenuItem.Checked = True
+                CastellanoToolStripMenuItem.Checked = False
+            Catch ex As Exception
+                MsgBox("Error english language", MsgBoxStyle.Critical)
+            End Try
         End If
 
         ' COLOR TEXTBOX OUTPUT
@@ -264,7 +295,39 @@ Public Class frmMain
         End If
     End Sub
 
-    Private Sub ConsolaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsolaToolStripMenuItem.Click
+    Sub idiomaAppCastellano(sender As Object, e As EventArgs)
+        Try
+            Thread.CurrentThread.CurrentUICulture = New CultureInfo("ES")
+            Controls.Clear() 'removes all the controls on the form
+            InitializeComponent() 'load all the controls again
+            'frmMain_Load(e, e) 'Load everything in your form load event again
+            InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(0)
+            My.Settings.idiomaApp = 0
+            My.Settings.Save()
+            CastellanoToolStripMenuItem.Checked = True
+            InglesToolStripMenuItem.Checked = False
+        Catch ex As Exception
+            MsgBox("Error idioma castellano", MsgBoxStyle.Critical)
+        End Try
+    End Sub
+
+    Sub idiomaAppIngles(sender As Object, e As EventArgs)
+        Try
+            Thread.CurrentThread.CurrentUICulture = New CultureInfo("EN")
+            Controls.Clear() 'removes all the controls on the form
+            InitializeComponent() 'load all the controls again
+            'frmMain_Load(e, e) 'Load everything in your form load event again
+            InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(1)
+            My.Settings.idiomaApp = 1
+            My.Settings.Save()
+            InglesToolStripMenuItem.Checked = True
+            CastellanoToolStripMenuItem.Checked = False
+        Catch ex As Exception
+            MsgBox("Error english language", MsgBoxStyle.Critical)
+        End Try
+    End Sub
+
+    Sub colorScriptConsola(sender As Object, e As EventArgs)
         txtScript.BackColor = Color.Black
         txtScript.ForeColor = Color.Lime
         ConsolaToolStripMenuItem.Checked = True
@@ -273,13 +336,21 @@ Public Class frmMain
         My.Settings.Save()
     End Sub
 
-    Private Sub NormalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NormalToolStripMenuItem.Click
+    Sub colorScriptNormal(sender As Object, e As EventArgs)
         txtScript.BackColor = Color.White
         txtScript.ForeColor = Color.Black
         ConsolaToolStripMenuItem.Checked = False
         NormalToolStripMenuItem.Checked = True
         My.Settings.colorScript = 1
         My.Settings.Save()
+    End Sub
+
+    Private Sub ConsolaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsolaToolStripMenuItem.Click
+        colorScriptConsola(sender, e)
+    End Sub
+
+    Private Sub NormalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NormalToolStripMenuItem.Click
+        colorScriptNormal(sender, e)
     End Sub
 
     Private Sub NuevoScriptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoScriptToolStripMenuItem.Click
@@ -327,36 +398,11 @@ Public Class frmMain
     End Sub
 
     Private Sub CastellanoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CastellanoToolStripMenuItem.Click
-        Try
-            Thread.CurrentThread.CurrentUICulture = New CultureInfo("ES")
-            Controls.Clear() 'removes all the controls on the form
-            InitializeComponent() 'load all the controls again
-            frmMain_Load(e, e) 'Load everything in your form load event again
-            InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(0)
-            My.Settings.idiomaApp = 0
-            My.Settings.Save()
-            CastellanoToolStripMenuItem.Checked = True
-            InglesToolStripMenuItem.Checked = False
-        Catch ex As Exception
-            MsgBox("Error idioma castellano", MsgBoxStyle.Critical)
-        End Try
+        idiomaAppCastellano(sender, e)
     End Sub
 
     Private Sub InglesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InglesToolStripMenuItem.Click
-        Try
-            Thread.CurrentThread.CurrentUICulture = New CultureInfo("EN")
-            Controls.Clear() 'removes all the controls on the form
-            InitializeComponent() 'load all the controls again
-            frmMain_Load(e, e) 'Load everything in your form load event again
-            InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages(1)
-            My.Settings.idiomaApp = 1
-            My.Settings.Save()
-            InglesToolStripMenuItem.Checked = True
-            CastellanoToolStripMenuItem.Checked = False
-        Catch ex As Exception
-            MsgBox("Error english language", MsgBoxStyle.Critical)
-        End Try
-
+        idiomaAppIngles(sender, e)
     End Sub
 
 End Class
