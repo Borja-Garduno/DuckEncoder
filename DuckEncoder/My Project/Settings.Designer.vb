@@ -136,9 +136,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.DuckEncoder.My.MySettings
+        Friend ReadOnly Property Settings() As Global.DuckyEncoder.My.MySettings
             Get
-                Return Global.DuckEncoder.My.MySettings.Default
+                Return Global.DuckyEncoder.My.MySettings.Default
             End Get
         End Property
     End Module

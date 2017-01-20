@@ -197,7 +197,7 @@ Partial Class frmMain
         'EncodeToolStripButton
         '
         Me.EncodeToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.EncodeToolStripButton.Image = Global.DuckEncoder.My.Resources.Resources.ducky2
+        Me.EncodeToolStripButton.Image = Global.DuckyEncoder.My.Resources.Resources.ducky2
         resources.ApplyResources(Me.EncodeToolStripButton, "EncodeToolStripButton")
         Me.EncodeToolStripButton.Name = "EncodeToolStripButton"
         '

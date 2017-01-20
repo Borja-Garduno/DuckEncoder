@@ -3,7 +3,7 @@
 Public Class frmIdioma
 
     Dim idiomaPath As String
-    Dim directorioTemporal As String = Path.GetTempPath() & "DuckEncoder\"
+    Dim directorioTemporal As String = Path.GetTempPath() & "DuckyEncoder\"
     Dim directorioResources As String = "resources\"
     Dim directorioResourcesMod As String = "mod\"
 

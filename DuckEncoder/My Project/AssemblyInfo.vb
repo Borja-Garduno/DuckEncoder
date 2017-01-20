@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: AssemblyTitle("DuckEncoder")>
+<Assembly: AssemblyTitle("DuckyEncoder")>
 <Assembly: AssemblyDescription("Programa para compilar los scripts del USB Rubber Ducky")>
 <Assembly: AssemblyCompany("Tiju's Corp")>
-<Assembly: AssemblyProduct("DuckEncoder")>
+<Assembly: AssemblyProduct("DuckyEncoder")>
 <Assembly: AssemblyCopyright("Copyright ©  2016")>
 <Assembly: AssemblyTrademark("")>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' mediante el carácter '*', como se muestra a continuación:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("2.0.0.0")>
-<Assembly: AssemblyFileVersion("2.0.0.0")>
+<Assembly: AssemblyVersion("3.0.0.0")>
+<Assembly: AssemblyFileVersion("3.0.0.0")>
