@@ -8,6 +8,7 @@ Public Class frmMain
 
     Dim directorioTemporal As String = Path.GetTempPath() & "DuckEncoder\"
     Dim directorioResources As String = "resources\"
+    Dim directorioResourcesMod As String = "mod\"
 
     Dim encoderPath As String = "encoder.jar"
     Dim languagePath As String = "es.properties"
@@ -26,6 +27,11 @@ Public Class frmMain
         ' COMPROBAR SI EL DIRECTORIO DUCKYENCODER\RESOURCES EXISTE
         If Not Directory.Exists(directorioTemporal + directorioResources) Then
             Directory.CreateDirectory(directorioTemporal + directorioResources)
+        End If
+
+        ' COMPROBAR SI EL DIRECTORIO DUCKYENCODER\RESOURCES\MOD EXISTE
+        If Not Directory.Exists(directorioTemporal + directorioResources + directorioResourcesMod) Then
+            Directory.CreateDirectory(directorioTemporal + directorioResources + directorioResourcesMod)
         End If
 
         ' COMPROBAR SI EXISTE EL FICHERO ENCODER.JAR
@@ -83,23 +89,24 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_FormClosed(sender As Object, e As EventArgs) Handles MyBase.FormClosed
-        ' ELIMINAR ENCODER
-        If File.Exists(directorioTemporal + encoderPath) = True Then
-            File.Delete(directorioTemporal + encoderPath)
-        End If
+        '' ELIMINAR ENCODER
+        'If File.Exists(directorioTemporal + encoderPath) = True Then
+        '    File.Delete(directorioTemporal + encoderPath)
+        'End If
 
-        ' ELIMINAR CARPETA RESOURCES + FICHEROS IDIOMAS
-        If Directory.Exists(directorioTemporal + directorioResources) Then
-            Directory.Delete(directorioTemporal + directorioResources, True)
-        End If
+        '' ELIMINAR CARPETA RESOURCES + FICHEROS IDIOMAS
+        'If Directory.Exists(directorioTemporal + directorioResources) Then
+        '    Directory.Delete(directorioTemporal + directorioResources, True)
+        'End If
 
         'If File.Exists(directorioTemporal + languagePath) = True Then
         '    File.Delete(directorioTemporal + languagePath)
         'End If
 
-        If File.Exists(directorioTemporal + scriptPath) Then
-            File.Delete(directorioTemporal + scriptPath)
-        End If
+        '' ELIMINAR SCRIPT.TXT TEMPORAL
+        'If File.Exists(directorioTemporal + scriptPath) Then
+        '    File.Delete(directorioTemporal + scriptPath)
+        'End If
     End Sub
 
     Sub nuevo()

@@ -3,6 +3,9 @@
 Public Class frmIdioma
 
     Dim idiomaPath As String
+    Dim directorioTemporal As String = Path.GetTempPath() & "DuckEncoder\"
+    Dim directorioResources As String = "resources\"
+    Dim directorioResourcesMod As String = "mod\"
 
     Private Sub frmIdioma_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -99,7 +102,7 @@ Public Class frmIdioma
         Try
             txtIdiomaModificado.Text = ofd.FileName
 
-            Dim newPath As String = "C:\Temp\DuckyEncoder\resources\" + Path.GetFileName(ofd.FileName)
+            Dim newPath As String = directorioTemporal & directorioResources & directorioResourcesMod & Path.GetFileName(ofd.FileName)
             File.Copy(ofd.FileName, newPath, 1)
 
             My.Settings.idiomaModificadoPath = newPath
